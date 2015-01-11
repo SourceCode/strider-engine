@@ -1,0 +1,21 @@
+############################
+# DIRECTORIES
+############################
+vendor/
+orm/
+public/components/
+node_modules/
+
+############################
+# DEPLOYMENT FILES  
+############################
+config.php
+propel.php
+.htaccess
+composer.lock
+bower.json
+
+############################
+# GENERATED FILES 
+############################
+*.log
