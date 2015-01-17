@@ -12,70 +12,36 @@ namespace Strider;
 class Controller
 {
     /**
-    * Contains Template Data Passed to Twig Template Engine 
-    */
-    private $templateData = array();
-
-    /**
     * Retrieves a model for a controller to use
+    * @param string $model The name of the model to load, will have Model appended to the name.
+    * @param string $app The app the model resides beneath
+    * @param string $namespace The namespace the app exists in
+    * @return object Returns the request model if found.
     */
-    public function getModel($model, $app)
+    public function getModel($model, $app, $namespace = 'Strider')
     {
-        
+        if ($app != null) $app .= '/';
+        require_once 'application/models/' . $controller . $model . '.php';
+        $modelName = '\\' . $namespace . '\\' . $model . 'Model';
+        return new $modelName(); 
     }
     
     /**
     * Render Method for Controller
+    * @param string $view The view to be rendered
+    * @param object $template Template object to be rendered 
     */
     public function render($view, Template $template)
     {
-        
-    }
-    
-    
-    
-    public function loadModel($modelName, $controller = null)
-    {
-        if ($controller != null) $controller .= '/';
-        require_once 'application/models/' . $controller . $modelName . '.php';
-        // return new model
-        $modelName = '\\HAL2\\' . $modelName . 'Model';
-        return new $modelName();
-    }
-
-    public function render($view, $dataArray = array())
-    {
-        $twigLoader = new \Twig_Loader_Filesystem(halConfig::$viewStorage);
-        $twig = new \Twig_Environment($twigLoader, array('debug' => halConfig::$debugMode));
-        if (halConfig::$debugMode)
+        $templateData = $template->toArray();
+        $twigLoader = new \Twig_Loader_Filesystem(Config::$viewStorage);
+        $twig = new \Twig_Environment($twigLoader, array('debug' => Config::$debugMode));
+        if (Config::$debugMode)
         {
             $twig->addExtension(new \Twig_Extension_Debug());
         }
-        $dataArray['templateJS'] = halTemplate::getJS(); 
-        $dataArray['templateCSS'] = halTemplate::getCSS();
-        if (halConfig::$debugMode) $dataArray['sessionData'] = $_SESSION; 
-        if (is_array($dataArray))
-        {
-            foreach($dataArray as $key => $value)
-            {
-                try
-                {
-                    $this->manageData($key, $value);
-                } catch(Exception $e)
-                {
-                    throw new Exception('Invalid Key Value Pair - ' . $e);
-                }
-            }
-        }
-
-        // render a view while passing the to-be-rendered data
-        echo $twig->render($view . '.' . halConfig::$viewFileType, $this->templateData);
-    }
-    
-    public function manageData($key, $value)
-    {
-        if (empty($key) || empty($value)) return false;
-        $this->templateData[$key] = $value;
-        return true;    
+        if (Config::$debugMode) $dataArray['sessionData'] = $_SESSION;
+        array_push($templateData, $templateData->toArray());
+        echo $twig->render($view . '.' . Config::$viewFileType, $templateData);     
     }
 }
