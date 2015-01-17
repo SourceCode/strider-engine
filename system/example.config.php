@@ -14,6 +14,11 @@ class Config
     use Singleton;
     
     /**
+    * The name for the project
+    */
+    public static $projectName = '';
+    
+    /**
     * The file type used for the twig template engine 
     */
     public static $viewFileType = 'twig';
