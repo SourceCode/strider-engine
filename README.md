@@ -51,46 +51,49 @@ Unit Tests  | In Progress
 # Traits
 Task  | Status
 ------------- | -------------
-Singleton  | In Progress
+Singleton  | Alpha
 
 # Interfaces
 Task  | Status
 ------------- | -------------
-Controller  | In Progress
-Model  | In Progress
+Controller  | Alpha
+Crud Model  | In Progress
+JSON Model  | In Progress
+XML Model  | In Progress
  
 # Abstractions
 Task  | Status
 ------------- | -------------
-Data Store  | In Progress
-Router  | In Progress
+Data Store  | Alpha
+Data Loader  | In Progress
+Router  | Alpha
 
 # CONCRETE CLASSES
 
 # Config
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
 # Globals
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
 # Controller
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
