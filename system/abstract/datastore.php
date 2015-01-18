@@ -17,11 +17,6 @@ abstract class DataStore
     protected static $dataStore = array();
     
     /**
-    * toArray() method requirement
-    */
-    abstract protected function toArray();
-    
-    /**
     * Sets a template value
     * @param $key The key to return the value for
     * @return mixed|null Returns mixed value type, null if nothing found.

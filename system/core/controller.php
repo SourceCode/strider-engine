@@ -9,8 +9,29 @@ namespace Strider;
 /**
  * The base Controller class
  */
-class Controller
+class Controller extends Router
 {
+    
+    /**
+    * Routes to the application controller
+    */
+    public function route()
+    {
+        $app = Globals::app();
+        dBug($app);
+        $controller = Globals::controller();
+        if ($app == null) $app = 'init';
+        if ($controller == null) $controller = $app;
+        Globals::getInstance();
+        Globals::setValue('loadedApp', Config::$filePath . Config::$appStorage . $app . '/controller/' . $controller . '.php');
+        require_once(Globals::getValue('loadedApp'));
+        $appName = ucfirst(strtolower($app));
+        $controllerName = ucfirst(strtolower($controller));
+        $applicationPathName = '\Strider\\' . $appName . '\\' . $controllerName;
+        $applicationThread = new $applicationPathName();
+        $applicationThread->route();     
+    }
+    
     /**
     * Retrieves a model for a controller to use
     * @param string $model The name of the model to load, will have Model appended to the name.
@@ -20,6 +41,7 @@ class Controller
     */
     public function getModel($model, $app, $namespace = 'Strider')
     {
+        dBug('this next ot be fixed to load models for the application only - orrrr?');
         if ($app != null) $app .= '/';
         require_once 'application/models/' . $controller . $model . '.php';
         $modelName = '\\' . $namespace . '\\' . $model . 'Model';
@@ -44,4 +66,6 @@ class Controller
         array_push($templateData, $templateData->toArray());
         echo $twig->render($view . '.' . Config::$viewFileType, $templateData);     
     }
+    
+
 }
