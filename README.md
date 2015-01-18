@@ -3,6 +3,27 @@ The Open Source Extensible App Engine
 
 by Ryan Rentfro & Isaac Mendoza
 
+# INSTALL INSTRUCTIONS
+We will be bringing this app to Composer and other loaders once code is stable.
+
+In the meantime if you are ready to use Strider do the following:
+
+Requirements:
+PHP 5.4
+Node JS
+
+- Run: install.sh - This will install of the Node JS, Bower, and Grunt Packages
+- Run: composer install
+
+(Note: If you can't run composer, download composer.phar with the instructions from Composers website)
+
+- Copy: example.config.php to config.php
+- Update: Update your settings and save
+- Run: Your URL in the browser (localhost/{yourapp} or whatever you've setup.
+
+(Note: You will be in the init app under app/init/controller/init.php)
+(Note: You can change all this with the config file if you want, just change it and test it!) 
+
 
 # FEATURE MATRIX
 
