@@ -9,7 +9,7 @@ namespace Strider;
 /**
  * Web Application Interface Blueprint
  */
-interface webApplication
+interface WebApplication
 {
     /**
      * Web Application Interface Blueprint

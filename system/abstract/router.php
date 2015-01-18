@@ -18,10 +18,9 @@ abstract class Router
     
     /** 
      * Call a method dynamically 
-     * 
      * @param string $method 
      * @param array $args 
-     * @return mixed 
+     * @return mixed Will return a boolean if the method exists and then calls it passing its arguments otherwise it will route404 
      */ 
     public function __call($method, $args) 
     { 
@@ -32,6 +31,9 @@ abstract class Router
         } 
     }
     
+    /** 
+     * Routes to the application 404 page
+     */ 
     private function route404()
     {
         if (\Strider\Config::$debugMode == false) throw new \Exception('Invalid Routing: Class Method Does Not Exist');
@@ -39,6 +41,5 @@ abstract class Router
         require_once("system/404.php");
         die();    
     }
-    
 }
 ?>

@@ -11,7 +11,6 @@ namespace Strider;
  */
 class Controller extends Router
 {
-    
     /**
     * Routes to the application controller
     */

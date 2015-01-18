@@ -10,7 +10,7 @@ use \Strider;
 /**
  * Init Application Controller
  */
-class Init extends \Strider\Controller implements \Strider\webApplication
+class Init extends \Strider\Controller implements \Strider\WebApplication
 {
     
     public function route()
