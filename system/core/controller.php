@@ -17,7 +17,6 @@ class Controller extends Router
     public function route()
     {
         $app = Globals::app();
-        dBug($app);
         $controller = Globals::controller();
         if ($app == null) $app = 'init';
         if ($controller == null) $controller = $app;
@@ -40,11 +39,16 @@ class Controller extends Router
     */
     public function getModel($model, $app, $namespace = 'Strider')
     {
-        dBug('this next ot be fixed to load models for the application only - orrrr?');
-        if ($app != null) $app .= '/';
-        require_once 'application/models/' . $controller . $model . '.php';
-        $modelName = '\\' . $namespace . '\\' . $model . 'Model';
+        $modelFile = Config::$filePath . Config::$appStorage . $app . '/model/' . ucfirst(strtolower($model)) . '.php';     
+        if (file_exists($modelFile))
+        {
+            require_once($modelFile);
+            $modelName = '\\' . $namespace . '\\' . ucfirst(strtolower($model)) . 'Model';
+            return new $modelName();
         return new $modelName(); 
+        } else {
+            throw new \Exception('Model does not exist within system.');
+        }
     }
     
     /**
@@ -65,6 +69,4 @@ class Controller extends Router
         array_push($templateData, $templateData->toArray());
         echo $twig->render($view . '.' . Config::$viewFileType, $templateData);     
     }
-    
-
 }

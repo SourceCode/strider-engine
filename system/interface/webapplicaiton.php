@@ -12,7 +12,7 @@ namespace Strider;
 interface WebApplication
 {
     /**
-     * Web Application Interface Blueprint
+     * Required index method
      */
     public function index();
 }

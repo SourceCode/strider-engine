@@ -21,8 +21,15 @@ class Init extends \Strider\Controller implements \Strider\WebApplication
         in the case of a real application you should just use the method call above.
         */
         $method = strtolower(\Strider\Globals::app());
-        if ($method == null) $method = 'index';
-        $this->$method(); 
+        if ($method == null) $method = 'index';     
+        $this->setRoutes(array('index', 'test'));
+        if ($this->isRoute($method))
+        {
+            $this->$method();    
+        } else {
+            $this->route404();    
+        }
+         
     }
     
     public function index()
@@ -32,7 +39,8 @@ class Init extends \Strider\Controller implements \Strider\WebApplication
     
     public function test()
     {
-        echo 'This is the public test function';
+        $initModel = $this->getModel('init', 'init');
+        $initModel->test();
     }
 }
 ?>
