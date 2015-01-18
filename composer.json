@@ -17,6 +17,9 @@
         "php-console/php-console": "3.*"
     },
     "autoload": {
-        "classmap": ["orm/"]
+        "classmap": ["orm/"],
+        "psr-4": {
+            "Strider\\":        "system/core/"
+        }
     }
 }
