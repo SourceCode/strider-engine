@@ -24,10 +24,10 @@ class Package
         $this->packages = array(
             'bootstrap' => array(
                 'js' => array(
-                    'file1'
+                    'public/components/bootstrap/dist/js/bootstrap.min.js'
                 ),
                 'css' => array(
-                    'file1'
+                    'public/components/bootstrap/dist/css/bootstrap.min.css'
                 )    
             ),
             'jquery' => array(
@@ -96,7 +96,8 @@ class Package
     */
     public function getPackage($name)
     {
-        
+        if (isset($this->packages[$name])) return $this->packages[$name];
+        return false;    
     }
     
     /**
@@ -107,7 +108,7 @@ class Package
     */
     public function addPackage($name, array $package)
     {
-        
+        $this->packages[$name] = $package;    
     }
     
     /**

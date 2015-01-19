@@ -53,7 +53,11 @@ abstract class Router
     */ 
     private function setRoutes($routes)
     {
-        if (is_array($routes)) $this->routes = $routes;
+        if (is_array($routes)) 
+        {
+            $this->routes = $routes;
+            return true;    
+        }
         return false;    
     }
     

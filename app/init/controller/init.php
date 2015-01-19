@@ -29,7 +29,6 @@ class Init extends \Strider\Controller implements \Strider\WebApplication
         } else {
             $this->route404();    
         }
-         
     }
     
     public function index()
