@@ -12,7 +12,7 @@ Requirements:
 PHP 5.4
 Node JS
 
-- Run: install.sh - This will install of the Node JS, Bower, and Grunt Packages
+- Run: install.sh - This will install all of the Node JS, Bower, and Grunt Packages
 - Run: composer install
 
 (Note: If you can't run composer, download composer.phar with the instructions from Composers website)
@@ -26,6 +26,7 @@ Node JS
 
 
 # FEATURE MATRIX
+The feature matrix covers the base features we plan to implement.
 
 Task  | Status
 ------------- | -------------
@@ -47,6 +48,7 @@ Unit Tests  | In Progress
 <hr />
 
 # CLASS BLUEPRINTS
+Class Blueprints are what we consider to be traits, interfacers, and abstractions.  They define the outline for objects in the system and their base shared functionality.
 
 # Traits
 Task  | Status
@@ -69,6 +71,7 @@ Data Loader  | In Progress
 Router  | Alpha
 
 # CONCRETE CLASSES
+Concrete classes are the collection of instantiable classes you can use to build your app.
 
 # Config
 Task  | Status
@@ -163,6 +166,8 @@ Tests | In Progress
 <hr />
 
 # UNIT TESTS
+Unit tests are tests built to validate the inner workings of exposed API.
+
 Test  | Status
 ------------- | -------------
 Globals  | In Progress 
