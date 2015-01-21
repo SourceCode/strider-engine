@@ -85,7 +85,7 @@ Task  | Status
 Base Class  | Alpha
 Properties  | Alpha
 Methods  | Alpha
-Interface/Abstraction | In Progress
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Controller
@@ -94,16 +94,16 @@ Task  | Status
 Base Class  | Alpha
 Properties  | Alpha
 Methods  | Alpha
-Interface/Abstraction | In Progress
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Model
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
-Interface/Abstraction | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Package
@@ -127,18 +127,18 @@ Tests | In Progress
 # Validate
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
-Interface/Abstraction | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Convert
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
@@ -154,9 +154,9 @@ Tests | In Progress
 # Debug
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
