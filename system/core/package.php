@@ -32,58 +32,48 @@ class Package
             ),
             'jquery' => array(
                 'js' => array(
-                    'file1'
-                ),
-                'css' => array(
-                    'file1'
-                )    
+                    'public/components/jquery/dist/jquery.min.js'
+                ),   
             ),
             'jquery-ui' => array(
                 'js' => array(
-                    'file1'
+                    'public/components/jquery-ui/jquery-ui.min.js'
                 ),
                 'css' => array(
-                    'file1'
+                    'public/components/jquery-ui/themes/base/theme.css'
                 )    
             ),
             'jquery-file-upload' => array(
                 'js' => array(
-                    'file1'
-                ),
-                'css' => array(
-                    'file1'
-                )    
-            ),
+                    'public/components/jquery-file-upload/jquery.fileupload.js'
+                )   
+            ),            
             'fontawesome' => array(
-                'js' => array(
-                    'file1'
-                ),
                 'css' => array(
-                    'file1'
+                    'public/components/font-awesome/css/font-awesome.min.css'
                 )    
             ),
             'chartjs' => array(
                 'js' => array(
-                    'file1'
-                ),
-                'css' => array(
-                    'file1'
-                )    
+                    'public/components/chartjs/Chart.min.js'
+                ),  
             ),
             'select2' => array(
                 'js' => array(
-                    'file1'
+                    'public/components/select2/select2.min.js'
                 ),
                 'css' => array(
-                    'file1'
+                    'public/components/select2/select2.css',
+                    'public/components/select2/select2-bootstrap.css'
                 )    
             ),
             'tinymce' => array(
                 'js' => array(
-                    'file1'
+                    'public/components/tinymce-dist/jquery.tinymce.min.js',
+                    'public/components/tinymce-dist/tinymce.min.js'
                 ),
                 'css' => array(
-                    'file1'
+                    'public/components/tinymce-dist/themes/modern/theme.min.js'
                 )    
             ),
         );        
@@ -98,6 +88,26 @@ class Package
     {
         if (isset($this->packages[$name])) return $this->packages[$name];
         return false;    
+    }
+    
+    /**
+    * Gets a set of packages from the package system
+    * @param array $packageList The list of packages to be retrieved
+    * @return array|bool Returns an array if the packages are found, false if nothing is found or invalid input.
+    */
+    public function getPackages(array $packageList)
+    {
+        $css = array(); $js = array();
+        foreach($packageList as $package)
+        {
+            $item = $this->getPackage[$package];
+            if ($item != false)
+            {
+                if (is_array($item['css'])) array_merge($css, $item['css']);
+                if (is_array($item['js'])) array_merge($js, $item['js']);
+            }   
+        }
+        return array('css' => $css, 'js' => $js);
     }
     
     /**
