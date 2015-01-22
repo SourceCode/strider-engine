@@ -62,6 +62,7 @@ Controller  | Alpha
 Crud Model  | In Progress
 JSON Model  | In Progress
 XML Model  | In Progress
+Event Observer | Alpha
  
 # Abstractions
 Task  | Status
@@ -69,6 +70,7 @@ Task  | Status
 Data Store  | Alpha
 Data Loader  | In Progress
 Router  | Alpha
+Event Subject  | Alpha
 
 # CONCRETE CLASSES
 Concrete classes are the collection of instantiable classes you can use to build your app.
@@ -148,10 +150,10 @@ Tests | In Progress
 # Event
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
-Interface/Abstraction | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Debug
