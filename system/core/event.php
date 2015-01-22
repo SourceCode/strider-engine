@@ -7,9 +7,9 @@
 namespace Strider;
 
 /**
- * The base Event class
- */
-class Event
+* The base Event class
+*/
+class Event extends EventSubject
 {
-    
+     
 }
