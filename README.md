@@ -30,18 +30,18 @@ The feature matrix covers the base features we plan to implement.
 
 Task  | Status
 ------------- | -------------
-Traits  | In Progress
-Interfaces  | In Progress
-Abstractions  | In Progress
+Traits  | Alpha
+Interfaces  | Alpha
+Abstractions  | Alpha
 Config   | Alpha
 Globals  | Alpha
 Controller  | Alpha
 Model  | Alpha
-Package  | In Progress
+Package  | Alpha
 Template  | In Progress
 Validate  | Alpha
 Convert  | Alpha
-Event  | In Progress
+Event  | Alpha
 Debug  | Alpha
 Unit Tests  | In Progress
 
@@ -114,9 +114,9 @@ Tests | In Progress
 # Package
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
 Interface/Abstraction | In Progress
 Tests | In Progress
 
