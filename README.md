@@ -173,8 +173,7 @@ Unit tests are tests built to validate the inner workings of exposed API.
 Test  | Status
 ------------- | -------------
 Convert | Alpha
-Debug | In Progress
-Globals | In Progress
+Globals | Alpha
 Package | In Progress
 Template | In Progress
 Validate | In Progress
