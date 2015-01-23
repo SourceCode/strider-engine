@@ -15,9 +15,9 @@ require_once("system/trait/singleton.php");
 /*
  * Autoload Traits, Abstract Classes, and Interfaces
  */
-foreach (glob("system/trait/*.php") as $trait) require_once $trait;
-foreach (glob("system/abstract/*.php") as $abstract) require_once $abstract;
-foreach (glob("system/interface/*.php") as $interface) require_once $interface;
+foreach (glob(Config::$filePath . "system/trait/*.php") as $trait) require_once $trait;
+foreach (glob(Config::$filePath . "system/abstract/*.php") as $abstract) require_once $abstract;
+foreach (glob(Config::$filePath . "system/interface/*.php") as $interface) require_once $interface;
 
 /*
  * Setup Debugging
