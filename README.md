@@ -38,7 +38,7 @@ Globals  | Alpha
 Controller  | Alpha
 Model  | Alpha
 Package  | Alpha
-Template  | In Progress
+Template  | Alpha
 Validate  | Alpha
 Convert  | Alpha
 Event  | Alpha
@@ -123,10 +123,10 @@ Tests | In Progress
 # Template
 Task  | Status
 ------------- | -------------
-Base Class  | In Progress
-Properties  | In Progress
-Methods  | In Progress
-Interface/Abstraction | In Progress
+Base Class  | Alpha
+Properties  | Alpha
+Methods  | Alpha
+Interface/Abstraction | Alpha
 Tests | In Progress
 
 # Validate
@@ -172,9 +172,16 @@ Unit tests are tests built to validate the inner workings of exposed API.
 
 Test  | Status
 ------------- | -------------
-Globals  | In Progress 
-Package  | In Progress
-Template  | In Progress
-Validate  | In Progress
-Convert  | In Progress
-Event  | In Progress
+Convert | Alpha
+Debug | In Progress
+Globals | In Progress
+Package | In Progress
+Template | In Progress
+Validate | In Progress
+
+
+# BLACK-BOX TESTS
+Examples are also interactive tests. 
+
+Test  | Status
+------------- | -------------
