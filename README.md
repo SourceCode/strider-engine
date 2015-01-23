@@ -176,7 +176,7 @@ Convert | Alpha
 Globals | Alpha
 Package | In Progress
 Template | In Progress
-Validate | In Progress
+Validate | Alpha
 
 
 # BLACK-BOX TESTS
