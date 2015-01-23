@@ -22,7 +22,6 @@ class Template extends DataStore
     * Stores CSS includes for the template system
     */
     private static $cssIncludes = array();
-    
 
     
     /**
