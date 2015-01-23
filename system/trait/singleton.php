@@ -29,7 +29,7 @@ trait Singleton
     /**
     * On construct runs the init method of the current object
     */
-    final private function __construct() {
+    final public function __construct() {
         $this->init();
     }
     

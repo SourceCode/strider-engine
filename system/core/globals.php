@@ -14,6 +14,11 @@ class Globals extends DataStore
     use Singleton;
     
     /**
+    * The URL for the call
+    */
+    private static $url = '';
+    
+    /**
     * The application filepath
     */
     private static $filePath = '';
@@ -208,7 +213,7 @@ class Globals extends DataStore
     */
     public static function getParm($key)
     {
-        if (is_numeric($key) && isset($parm[$key])) return self::$parm[$key];
+        if (is_numeric($key) && isset(self::$parm[$key])) return self::$parm[$key];
         return null;
     }
 
@@ -248,6 +253,7 @@ class Globals extends DataStore
     */
     public static function setParm($key, $value)
     {
+
         if (is_numeric($key) && $key < 9)
         {
             self::$parm[$key] = $value;
