@@ -22,7 +22,6 @@ class Template extends DataStore
     * Stores CSS includes for the template system
     */
     private static $cssIncludes = array();
-
     
     /**
     * Checks if a value exists
@@ -71,7 +70,7 @@ class Template extends DataStore
     */
     public static function getJs()
     {
-        $jsFiles = '';
+        $jsList = '';
         if (is_array(self::$jsIncludes))
         {
             foreach(self::$jsIncludes as $js)
@@ -94,7 +93,7 @@ class Template extends DataStore
         {
             foreach(self::$cssIncludes as $css)
             {
-                $cssList .= '<script type="text/javascript" src="' . $css . '"></script>' . "\r\n";
+                $cssList .= '<link href="' . $css . '" rel="stylesheet">' . "\r\n";
             }
             return $cssList;
         }
