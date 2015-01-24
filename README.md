@@ -17,13 +17,14 @@ Node JS
 
 (Note: If you can't run composer, download composer.phar with the instructions from Composers website)
 
-- Copy: example.config.php to config.php
+- Copy: system/core/example.config.php to system/core/config.php
 - Update: Update your settings and save
 - Run: Your URL in the browser (localhost/{yourapp} or whatever you've setup.
 
 (Note: You will be in the init app under app/init/controller/init.php)
 (Note: You can change all this with the config file if you want, just change it and test it!) 
 
+Documentation is included in source or you can compile it with phpdoc.
 
 # FEATURE MATRIX
 The feature matrix covers the base features we plan to implement.
@@ -43,7 +44,7 @@ Validate  | Alpha
 Convert  | Alpha
 Event  | Alpha
 Debug  | Alpha
-Unit Tests  | In Progress
+Unit Tests  | Alpha
 
 <hr />
 
@@ -175,7 +176,7 @@ Test  | Status
 Convert | Alpha
 Globals | Alpha
 Package | In Progress
-Template | In Progress
+Template | Alpha
 Validate | Alpha
 
 
