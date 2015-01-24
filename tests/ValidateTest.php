@@ -11,7 +11,7 @@ require_once($path . '/system/trait/singleton.php');
 require_once($path . '/system/abstract/datastore.php');
 
 /**
-* Test for Globals concrete class
+* Test for Validate concrete class
 */
 class ValidateTest extends \PHPUnit_Framework_TestCase
 {
