@@ -100,13 +100,14 @@ class Package
         $css = array(); $js = array();
         foreach($packageList as $package)
         {
-            $item = $this->getPackage[$package];
+            $item = $this->getPackage($package);
             if ($item != false)
             {
-                if (is_array($item['css'])) array_merge($css, $item['css']);
-                if (is_array($item['js'])) array_merge($js, $item['js']);
+                if (is_array($item['css'])) $css = array_merge($css, $item['css']);
+                if (is_array($item['js'])) $js = array_merge($js, $item['js']);
             }   
         }
+        
         return array('css' => $css, 'js' => $js);
     }
     
