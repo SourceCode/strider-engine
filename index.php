@@ -7,4 +7,3 @@
 namespace Strider;
 
 require_once('system/core/application.php');
-?>
