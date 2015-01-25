@@ -5,6 +5,7 @@ vendor/
 orm/
 public/components/
 node_modules/
+docs/
 
 ############################
 # DEPLOYMENT FILES  
