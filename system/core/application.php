@@ -46,7 +46,11 @@ if (Config::$debugMode == true)
     Globals::setValue('debug', true);
 }
 
-
+/*
+ * Load Propel Config if it exists
+ */
+if (file_exists(Config::$filePath . 'system/core/propel.php')) require('propel.php');
+ 
 /*
  * Run the Application via the Strider Controller
  */

@@ -3,6 +3,10 @@ The Open Source Extensible App Engine
 
 by Ryan Rentfro & Isaac Mendoza
 
+# NOTES
+- This development stack/framework is just at Beta 1 and for testing and research purposes.
+- Documentation is coming in the wiki as time goes on.
+
 # INSTALL INSTRUCTIONS
 We will be bringing this app to Composer and other loaders once code is stable.
 
@@ -25,6 +29,16 @@ Node JS
 (Note: You can change all this with the config file if you want, just change it and test it!) 
 
 Documentation is included in source or you can compile it with phpdoc.
+
+
+
+Integration Information
+
+Task  | Details
+------------- | -------------
+Propel2 | Rename system/core/example.propel.php to propel.php and propel is enabled.
+Propel2 | Run build.sh to build propel then composer update to update your autoloader
+
 
 # FEATURE MATRIX
 The feature matrix covers the base features we plan to implement.
