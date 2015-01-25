@@ -31,20 +31,20 @@ The feature matrix covers the base features we plan to implement.
 
 Task  | Status
 ------------- | -------------
-Traits  | Alpha
-Interfaces  | Alpha
-Abstractions  | Alpha
-Config   | Alpha
-Globals  | Alpha
-Controller  | Alpha
-Model  | Alpha
-Package  | Alpha
-Template  | Alpha
-Validate  | Alpha
-Convert  | Alpha
-Event  | Alpha
-Debug  | Alpha
-Unit Tests  | Alpha
+Traits  | Beta
+Interfaces  | Beta
+Abstractions  | Beta
+Config   | Beta
+Globals  | Beta
+Controller  | Beta
+Model  | Beta
+Package  | Beta
+Template  | Beta
+Validate  | Beta
+Convert  | Beta
+Event  | Beta
+Debug  | Beta
+Unit Tests  | Beta
 
 <hr />
 
@@ -54,24 +54,24 @@ Class Blueprints are what we consider to be traits, interfacers, and abstraction
 # Traits
 Task  | Status
 ------------- | -------------
-Singleton  | Alpha
+Singleton  | Beta
 
 # Interfaces
 Task  | Status
 ------------- | -------------
-Controller  | Alpha
-Crud Model  | In Progress
-JSON Model  | In Progress
-XML Model  | In Progress
-Event Observer | Alpha
+Controller  | Beta
+Crud Model  | Beta
+JSON Model  | Beta
+XML Model  | Beta
+Event Observer | Beta
  
 # Abstractions
 Task  | Status
 ------------- | -------------
-Data Store  | Alpha
-Data Loader  | In Progress
-Router  | Alpha
-Event Subject  | Alpha
+Data Store  | Beta
+Data Loader  | Beta
+Router  | Beta
+Event Subject  | Beta
 
 # CONCRETE CLASSES
 Concrete classes are the collection of instantiable classes you can use to build your app.
@@ -79,92 +79,82 @@ Concrete classes are the collection of instantiable classes you can use to build
 # Config
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | In Progress
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
 
 # Globals
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
+Tests | Beta
 
 # Controller
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
 
 # Model
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
 
 # Package
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | In Progress
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Tests | Beta
 
 # Template
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
+Tests | Beta
 
 # Validate
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
+Tests | Beta
 
 # Convert
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | In Progress
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Tests | Beta
 
 # Event
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | Alpha
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
+Interface/Abstraction | Beta
 
 # Debug
 Task  | Status
 ------------- | -------------
-Base Class  | Alpha
-Properties  | Alpha
-Methods  | Alpha
-Interface/Abstraction | In Progress
-Tests | In Progress
+Base Class  | Beta
+Properties  | Beta
+Methods  | Beta
 
 <hr />
 
@@ -173,12 +163,11 @@ Unit tests are tests built to validate the inner workings of exposed API.
 
 Test  | Status
 ------------- | -------------
-Convert | Alpha
-Globals | Alpha
-Package | In Progress
-Template | Alpha
-Validate | Alpha
-
+Convert | Beta
+Globals | Beta
+Package | Beta
+Template | Beta
+Validate | Beta
 
 # BLACK-BOX TESTS
 Examples are also interactive tests. 
