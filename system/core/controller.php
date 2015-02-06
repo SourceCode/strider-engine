@@ -16,6 +16,7 @@ class Controller extends Router
     */
     public function route()
     {
+        Globals::init();
         $app = Globals::app();
         $controller = Globals::controller();
         if ($app == null) $app = 'init';

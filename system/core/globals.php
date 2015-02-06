@@ -71,7 +71,7 @@ class Globals extends DataStore
     /**
     * Constructs the object setting its properties.
     */
-    public function init()
+    public static function init()
     {
         self::$filePath = Config::$filePath;
         self::$webPath = Config::$webPath;
