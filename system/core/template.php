@@ -36,7 +36,7 @@ class Template extends DataStore
     
     /**
     * Adds a JavaScript file to the JavaScript file list
-    * @param $file Adds a file to the JavaScript include list
+    * @param string $file The file to be added
     * @return bool Returns true if file was added, false if not
     */
     public static function addJs($file)
@@ -47,6 +47,24 @@ class Template extends DataStore
             return true;    
         }
         return false;    
+    }
+    
+    /**
+    * Adds a list of JavaScript files to the JavaScript file list
+    * @param array $array List of files to be added
+    * @return bool Returns true if files were added, false if not
+    */
+    public static function addJsFiles(array $array)
+    {
+        if (!is_array($array)) return false;
+        foreach($array as $include)
+        {
+            if (!in_array($include, self::$jsIncludes))
+            {
+                self::$jsIncludes[] = $include;
+            }  
+        }
+        return true;  
     }
     
     /**
@@ -62,6 +80,24 @@ class Template extends DataStore
             return true;    
         }
         return false;  
+    }
+    
+    /**
+    * Adds a CSS file to the CSS file list
+    * @param $file Adds a file to the CSS include list
+    * @return bool Returns true if file was added, false if not
+    */
+    public static function addCSSFiles(array $array)
+    {
+        if (!is_array($array)) return false;
+        foreach($array as $include)
+        {
+            if (!in_array($include, self::$cssIncludes))
+            {
+                self::$cssIncludes[] = $include;
+            }  
+        }
+        return true;  
     }
     
     /**

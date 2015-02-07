@@ -67,13 +67,29 @@ class Package
                     'public/components/select2/select2-bootstrap.css'
                 )    
             ),
+            'metismenu' => array(
+                'js' => array(
+                    'public/components/metismenu/dist/metisMenu.min.js'
+                ),
+                'css' => array(
+                    'public/components/metismenu/dist/metisMenu.min.css'
+                )    
+            ),
             'tinymce' => array(
                 'js' => array(
                     'public/components/tinymce-dist/jquery.tinymce.min.js',
                     'public/components/tinymce-dist/tinymce.min.js'
                 ),
                 'css' => array(
-                    'public/components/tinymce-dist/themes/modern/theme.min.js'
+                    'public/components/tinymce-dist/themes/modern/theme.min.css'
+                )    
+            ),
+            'sbadmin2' => array(
+                'js' => array(
+                    'public/components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js'
+                ),
+                'css' => array(
+                    'public/components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css'
                 )    
             ),
         );        
@@ -103,8 +119,8 @@ class Package
             $item = $this->getPackage($package);
             if ($item != false)
             {
-                if (is_array($item['css'])) $css = array_merge($css, $item['css']);
-                if (is_array($item['js'])) $js = array_merge($js, $item['js']);
+                if (isset($item['css']) && is_array($item['css'])) $css = array_merge($css, $item['css']);
+                if (isset($item['js']) && is_array($item['js'])) $js = array_merge($js, $item['js']);
             }   
         }
         
