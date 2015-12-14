@@ -213,7 +213,7 @@ class Globals extends DataStore
     */
     public static function getParm($key)
     {
-        if (is_numeric($key) && isset(self::$parm[$key])) return self::$parm[$key];
+        if (is_numeric($key)) return self::$parm[$key];
         return null;
     }
 
@@ -256,6 +256,7 @@ class Globals extends DataStore
 
         if (is_numeric($key) && $key < 9)
         {
+            dBug('setting value');
             self::$parm[$key] = $value;
             return true;   
         }

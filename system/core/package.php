@@ -40,7 +40,9 @@ class Package
                     'public/components/jquery-ui/jquery-ui.min.js'
                 ),
                 'css' => array(
-                    'public/components/jquery-ui/themes/base/theme.css'
+                    'public/components/jquery-ui/themes/base/theme.css',
+                    'public/components/jquery-ui/themes/flick/jquery-ui.min.css',
+                    
                 )    
             ),
             'jquery-file-upload' => array(

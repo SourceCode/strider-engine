@@ -20,6 +20,12 @@ foreach (glob(Config::$filePath . "system/abstract/*.php") as $abstract) require
 foreach (glob(Config::$filePath . "system/interface/*.php") as $interface) require_once $interface;
 
 /*
+ * Load the now() function into global space if it exists
+ */
+if (file_exists(Config::$filePath . 'system/ext/now.php')) require_once(Config::$filePath . 'system/ext/now.php');
+if (file_exists(Config::$filePath . 'system/ext/getStatus.php')) require_once(Config::$filePath . 'system/ext/getStatus.php');
+
+/*
  * Setup Debugging
  */
 if (Config::$debugMode == true)
@@ -49,7 +55,7 @@ if (Config::$debugMode == true)
 /*
  * Load Propel Config if it exists
  */
-if (file_exists(Config::$filePath . 'system/core/propel.php')) require('propel.php');
+if (file_exists(Config::$filePath . 'system/core/propel.php')) require(Config::$filePath . 'system/core/propel.php');
  
 /*
  * Run the Application via the Strider Controller

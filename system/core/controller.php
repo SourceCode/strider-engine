@@ -66,14 +66,9 @@ class Controller extends Router
         if ($controller == null) $controller = $app;
         $twigLoader = new \Twig_Loader_Filesystem(Config::$filePath . Config::$appStorage . $app . '/' . Config::$viewStorage);
         $twig = new \Twig_Environment($twigLoader, array('debug' => Config::$debugMode));
-        if (Config::$debugMode)
-        {
-            $twig->addExtension(new \Twig_Extension_Debug());
-        }
-        
+        if (Config::$debugMode) $twig->addExtension(new \Twig_Extension_Debug());
         $globals = Globals::toArray();
         $templateData = array_merge($templateData, $globals);
-        dBug($templateData);
         echo $twig->render($view . '.' . Config::$viewFileType, $templateData);     
     }
 }
