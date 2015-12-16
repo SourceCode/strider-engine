@@ -1,7 +1,7 @@
 # Strider Engine
 The Open Source Extensible App Engine
 
-by Ryan Rentfro & Isaac Mendoza
+by Ryan Rentfro
 
 # NOTES
 - This development stack/framework is just at Beta 1 and for testing and research purposes.
